@@ -1,0 +1,4 @@
+#Config folder for IntelliJ
+.idea/*
+#Cache folder for Vertx
+.vertx/*
