@@ -14,21 +14,21 @@ public class StaticServer extends AbstractVerticle {
 
         Router router = Router.router(vertx);
 
-        router.route("/static/*").handler(
+        router.route("/*").handler(
                 StaticHandler
                         .create("webroot")
                         .setIndexPage("index.html")
         );
 
-        router.route().handler(routingContext -> {
-
-            System.out.println("Incoming request " +
-                    routingContext.request().bodyHandler(buffer -> {
-                        System.out.println("=| Body: " + buffer.toString());
-                    }));
-
-            routingContext.response().sendFile("webroot/index.html");
-        });
+//        router.route().handler(routingContext -> {
+//
+//            System.out.println("Incoming request " +
+//                    routingContext.request().bodyHandler(buffer -> {
+//                        System.out.println("=| Body: " + buffer.toString());
+//                    }));
+//
+//            routingContext.response().sendFile("webroot/index.html");
+//        });
 
 
 

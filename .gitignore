@@ -2,3 +2,5 @@
 .idea/*
 #Cache folder for Vertx
 .vertx/*
+#Build folder
+target
